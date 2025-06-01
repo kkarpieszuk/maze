@@ -139,22 +139,47 @@ body {
 	background: repeating-linear-gradient(135deg, transparent, transparent 3px, var(--wall-color) 7px, var(--wall-color) 5px);
 }
 
-#arrow-panel {
+.arrow-panel {
 	position: absolute;
-	left: 50%;
-	bottom: 2rem;
+	left: 0;
+	bottom: 6rem;
 	top: auto;
-	transform: translateX(-50%);
-	background: rgba(255,255,255,0.5);
-	padding: 1.2rem 1.5rem;
-	border-radius: 1.2rem;
-	box-shadow: 0 4px 24px #0002;
 	z-index: 1000;
 	display: flex;
+	gap: 1rem;
 	flex-direction: column;
 	align-items: center;
 	user-select: none;
+
+	& button {
+		font-size: 3.5rem;
+		opacity: 0.5;
+	}
 }
+
+#arrow-panel-left {
+	left: 10px;
+	right: auto;
+}
+
+#arrow-panel-right {
+	right: 10px;
+	left: auto;
+	flex-direction: row;
+}
+
+#arrow-panel-controls {
+	top: 10px;
+	right: 10px;
+	left: auto;
+	bottom: auto;
+	flex-direction: row;
+
+	& button {
+		font-size: 1.5rem;
+	}
+}
+
 #arrow-panel.position-top {
 	top: 2rem;
 	bottom: auto;
@@ -176,10 +201,7 @@ body {
 	transition: background 0.2s;
 
 }
-#arrow-panel > div {
-	display: flex;
-	gap: 0.7rem;
-}
+
 #arrow-panel button:active {
 	background: #e0e0e0;
 }

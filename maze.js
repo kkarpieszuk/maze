@@ -691,18 +691,10 @@ document.addEventListener('DOMContentLoaded', () => {
 			const btnDown = document.getElementById('arrow-down');
 			const btnLeft = document.getElementById('arrow-left');
 			const btnRight = document.getElementById('arrow-right');
-			const btnRepin = document.getElementById('repin');
 			if (btnUp) btnUp.addEventListener('click', () => moveHero(0, -1));
 			if (btnDown) btnDown.addEventListener('click', () => moveHero(0, 1));
 			if (btnLeft) btnLeft.addEventListener('click', () => moveHero(-1, 0));
 			if (btnRight) btnRight.addEventListener('click', () => moveHero(1, 0));
-			if (btnRepin) btnRepin.addEventListener('click', () => {
-				const panel = document.getElementById('arrow-panel');
-				if (panel) {
-					panel.classList.toggle('position-bottom');
-					panel.classList.toggle('position-top');
-				}
-			});
 		}
 		setupArrowPanel();
 
@@ -740,7 +732,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	function updateLevelButton() {
 		const levelBtn = document.getElementById('level');
 		if (levelBtn) {
-			levelBtn.textContent = Math.floor(cols / 5);
+			levelBtn.querySelector('#level-number').textContent = Math.floor(cols / 5);
 		}
 	}
 	updateLevelButton();
