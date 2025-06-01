@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Gra Labirynt</title>
+	<script>
+		// Dodaj losowy parametr do plików css i js
+		const rand = Math.floor(Math.random() * 1e8);
+		document.write('<link rel="stylesheet" href="style.css?v=' + rand + '">');
+	</script>
+</head>
+<body>
+	<div class="maze-container">
+		<!-- Siatka o liczbie kolumn podanej w data-cols, liczba wierszy dobierana automatycznie -->
+		<div class="maze-grid" data-cols="5">
+			<!-- Divy siatki będą generowane przez JS -->
+		</div>
+	</div>
+	<div id="arrow-panel" class="position-bottom">
+		<div>
+			<button id="level">1</button>
+			<button id="arrow-up">⬆️</button>
+			<button id="restart">💀</button>
+		</div>
+		<div>
+			<button id="arrow-left">⬅️</button>
+			<button id="repin">🔀</button>
+			<button id="arrow-right">➡️</button>
+		</div>
+		<div>
+			<button id="arrow-down">⬇️</button>
+		</div>
+	</div>
+	<div id="win-overlay" style="display:none;">
+		<div class="win-content">
+			<h2>Brawo, przejdź do następnego poziomu!</h2>
+			<button id="next-level-btn">Idź dalej</button>
+		</div>
+	</div>
+	<div id="start-overlay" class="info-overlay">
+		<div id="start-message" class="info-content">Dotrzyj do pucharu</div>
+	</div>
+	<div id="restart-overlay" style="display:none; position:fixed; left:0; top:0; right:0; bottom:0; background:rgba(0,0,0,0.5); z-index:3000; align-items:center; justify-content:center;">
+		<div class="info-content" style="min-width:320px; text-align:center;">
+			<h2>Czy na pewno chcesz zacząć od początku?</h2>
+			<div style="display:flex; flex-direction:column; gap:1rem; margin-top:2rem;">
+				<button id="restart-level-btn" style="font-size:1.2rem; padding:0.7rem 1.5rem;">Restartuj poziom</button>
+				<button id="restart-game-btn" style="font-size:1.2rem; padding:0.7rem 1.5rem;">Restartuj grę</button>
+				<button id="restart-cancel-btn" style="font-size:1.2rem; padding:0.7rem 1.5rem; background:#eee; color:#222;">Anuluj</button>
+			</div>
+		</div>
+	</div>
+	<div id="herb-overlay" class="info-overlay" style="display:none;">
+		<div id="herb-message" class="info-content" style="font-size:2.2rem;">Magiczne zioła sprawiają, że widzisz więcej końca planszy, zbieraj je</div>
+	</div>
+	<div id="brain-overlay" class="info-overlay" style="display:none;">
+		<div id="brain-message" class="info-content" style="font-size:2.2rem;">Gdy znajdziesz mózg, wróci ci pamięć gdzie już byłeś</div>
+	</div>
+	<div id="phone-overlay" class="info-overlay" style="display:none;">
+		<div id="phone-message" class="info-content" style="font-size:2.2rem;">Z telefonu możesz zadzwonić po karetkę, dotrzyj do niej lub do pucharu</div>
+	</div>
+	<script>
+		// Dodaj losowy parametr do maze.js
+		document.write('<script src="maze.js?v=' + rand + '"><\/script>');
+	</script>
+</body>
+</html>
