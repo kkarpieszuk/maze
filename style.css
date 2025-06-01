@@ -136,7 +136,9 @@ body {
 
 .cell-hidden {
 	border: none !important;
-	background: repeating-linear-gradient(135deg, transparent, transparent 3px, var(--wall-color) 7px, var(--wall-color) 5px);
+	background-image: url('assets/bg-hidden.webp');
+	background-size: contain;
+	background-position: 15% 6%;
 }
 
 .arrow-panel {
