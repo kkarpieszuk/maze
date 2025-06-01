@@ -38,9 +38,6 @@
 			<button id="next-level-btn">Idź dalej</button>
 		</div>
 	</div>
-	<div id="start-overlay" class="info-overlay">
-		<div id="start-message" class="info-content">Dotrzyj do pucharu</div>
-	</div>
 	<div id="restart-overlay" style="display:none; position:fixed; left:0; top:0; right:0; bottom:0; background:rgba(0,0,0,0.5); z-index:3000; align-items:center; justify-content:center;">
 		<div class="info-content" style="min-width:320px; text-align:center;">
 			<h2>Czy na pewno chcesz zacząć od początku?</h2>
@@ -51,14 +48,25 @@
 			</div>
 		</div>
 	</div>
+	<div id="start-overlay" class="info-overlay">
+		<div id="start-message" class="info-content">Dotrzyj do pucharu
+			<button class="info-close" onclick="hideInfoOverlay('start-overlay')" aria-label="Zamknij">✖</button>
+		</div>
+	</div>
 	<div id="herb-overlay" class="info-overlay" style="display:none;">
-		<div id="herb-message" class="info-content" style="font-size:2.2rem;">Magiczne zioła sprawiają, że widzisz więcej końca planszy, zbieraj je</div>
+		<div id="herb-message" class="info-content" style="font-size:2.2rem;">Magiczne zioła sprawiają, że widzisz więcej końca planszy, zbieraj je
+			<button class="info-close" onclick="hideInfoOverlay('herb-overlay')" aria-label="Zamknij">✖</button>
+		</div>
 	</div>
 	<div id="brain-overlay" class="info-overlay" style="display:none;">
-		<div id="brain-message" class="info-content" style="font-size:2.2rem;">Gdy znajdziesz mózg, wróci ci pamięć gdzie już byłeś</div>
+		<div id="brain-message" class="info-content" style="font-size:2.2rem;">Gdy znajdziesz mózg, wróci ci pamięć gdzie już byłeś
+			<button class="info-close" onclick="hideInfoOverlay('brain-overlay')" aria-label="Zamknij">✖</button>
+		</div>
 	</div>
 	<div id="phone-overlay" class="info-overlay" style="display:none;">
-		<div id="phone-message" class="info-content" style="font-size:2.2rem;">Z telefonu możesz zadzwonić po karetkę, dotrzyj do niej lub do pucharu</div>
+		<div id="phone-message" class="info-content" style="font-size:2.2rem;">Z telefonu możesz zadzwonić po karetkę, dotrzyj do niej lub do pucharu
+			<button class="info-close" onclick="hideInfoOverlay('phone-overlay')" aria-label="Zamknij">✖</button>
+		</div>
 	</div>
 	<script>
 		// Dodaj losowy parametr do maze.js

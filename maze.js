@@ -924,4 +924,6 @@ document.addEventListener('DOMContentLoaded', () => {
 			restartOverlay.classList.remove('fade-in');
 		}
 	});
+
+	window.hideInfoOverlay = hideInfoOverlay;
 });
